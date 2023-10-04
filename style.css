@@ -22,7 +22,7 @@ body {
     border: 2px solid #6b3812;
     margin-bottom: 50px;
     z-index: 1;
-  
+
 }
 
 .navItem {
@@ -57,12 +57,14 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .title {
     font-family: 'Fraunces', serif;
     font-size: 40px;
     font-weight: 700;
     color: #6b3812;
 }
+
 .column2 {
 
     margin: auto;
@@ -83,7 +85,7 @@ body {
     align-items: center;
     padding-right: 20px;
 }
-  
+
 /* 
 .fotoProfil {
     display: flex;
@@ -121,12 +123,14 @@ body {
 }
 
 /* about me */
+
 .aboutme {
     display: flex;
     width: 100%;
     padding: 0 60px;
     gap: 40px;
-  
+    margin-bottom: 50px;
+
 }
 
 .fotoAbout {
@@ -161,4 +165,54 @@ body {
     font-size: 20px;
     font-weight: 700;
     color: #6b3812;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 20px 40px;
+    background-color: #6b3912b7;
+    gap: 40px;
+}
+
+.titleFooter {
+    margin: auto;
+}
+
+.titleFooter h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #F8F0DE;
+}
+
+.titleFooter p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    color: #F8F0DE;
+    line-height: 1;
+}
+
+.tubuhFooter {
+    display: block;
+    margin: auto;
+    gap: 10px;
+    color: #F8F0DE;
+}
+
+.tubuhFooter a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    /* border-radius: 21px; */
+    background: #F8F0DE;
+    border-radius: 34px;
+/* background: #e0e0e0; */
+box-shadow:  6px 7px 5px #656565, -3px -4px 7px #ffffff;
 }
