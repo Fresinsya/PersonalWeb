@@ -236,6 +236,94 @@ body {
     box-shadow: 6px 7px 5px #656565, -3px -3px 5px #F8F0DE;
 }
 
+.slick-carousel {
+    margin: 1rem auto;
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
+    height: 400px;
+}
+
+.slick-slide {
+    margin: 0 10px;
+    height: 400px;
+}
+
+.slick-list {
+    margin: 0 -10px;
+}
+
+.slick-carousel img {
+    object-fit: cover;
+    height: 350px !important;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Progress Bar Styles */
+
+.slick-dots {
+    bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+@keyframes progressBar {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.slick-dots li {
+    background: #DFDFDF;
+    height: 4px;
+    flex: 1;
+    position: relative;
+    width: 100%;
+    max-width: 270px;
+}
+
+.slick-dots li.slick-active {
+    background: #DFDFDF;
+    position: relative;
+}
+
+.slick-dots li.slick-active:after {
+    content: "";
+    background-color: #666666;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    animation: progressBar 6s ease-in-out;
+    /* <-- match the speed with your slick slider autoplaySpeed !! */
+    animation-fill-mode: both;
+    z-index: 5;
+    top: 0;
+}
+
+.slick-dots li button {
+    height: 0.5rem;
+}
+
+.slick-dots li button:before {
+    content: "";
+    color: white;
+}
+
 
 
 /*             contact                 */
@@ -269,7 +357,7 @@ body {
     margin-bottom: 20px;
 }
 
-.formContact{
+.formContact {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -296,9 +384,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    .input {
-        
-    }
+    .input {}
 }
 
 .btn {
@@ -318,52 +404,53 @@ body {
 
 /*              project                */
 
-.containerProject{
-        display: grid;
-        place-items: center;
-        position: relative;
-        height: 100vh;
-        background-color: #9a99f2;
-        box-sizing: border-box;
+#Project {
+    padding-top: 90px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    margin: auto;
+    width: 80%;
 }
+
+.containerProject {
+    display: grid;
+    place-items: center;
+    position: relative;
+    height: 65vh;
+    box-sizing: border-box;
+    border: 2px solid #6b3812;
+}
+
 .swiper-container {
     border-radius: 5px;
-    width: 70vw;
+    width: 60vw;
     overflow: hidden;
-    height: fit-content;
-    height: fit-content;
     font-size: 50px;
     position: relative;
     padding-bottom: 50px;
     font-family: sans-serif;
-  }
-  
-  .swiper-slide {
-    width: auto;
-    height: fit-content;
-    display: flex;
-    height: auto;
+}
+
+.swiper-slide {
     border-radius: 5px;
     overflow: hidden;
-    align-items: flex-start;
-    flex-direction: column;
     padding: 0px;
     font-family: Nunito;
     background-color: white;
-  
-  }
-  
-  .swiper-slide .ImgHolder {
+
+}
+
+.swiper-slide .ImgHolder {
     background-color: #4361ee;
     display: flex;
     width: 100%;
     height: auto;
     padding: 30px;
     border-bottom-left-radius: 20px;
-  
-  }
-  
-  .ContentHolder::before {
+
+}
+
+.ContentHolder::before {
     background-color: #4361ee;
     content: '';
     width: 50px;
@@ -372,30 +459,35 @@ body {
     top: -5px;
     z-index: -1;
     right: 0px;
-  }
-  
-  .ContentHolder {
+}
+
+.ContentHolder {
     position: relative;
     padding: 10px;
     background-color: white;
     border-top-right-radius: 20px;
-  }
-  
-  .swiper-pagination-bullet {
+}
+
+.swiper-pagination-bullet {
     background-color: white;
     opacity: 1;
     border: 1px solid #4361ee;
-  }
-  
-  .swiper-pagination-bullet-active {
+}
+
+.swiper-pagination-bullet-active {
     background-color: #4361ee;
-  }
-  
-  .swiper-button {
+}
+
+.swiper-button {
     border: 1px solid white;
-  }
-  
-  .swiper-slide img {
+}
+
+#slideHolder :nth-child(odd){
+    top: 50px;
+
+}
+
+.swiper-slide img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -403,47 +495,58 @@ body {
     object-fit: cover;
     border: 3px solid #4361ee;
     outline: 2px solid white;
-  }
-  
-  .swiper-slide h3 {
+}
+
+.swiper-slide h3 {
     font-size: 1.1rem;
     text-align: center;
     font-weight: bold;
-  }
-  
-  .swiper-slide p {
+}
+
+.swiper-slide p {
     font-size: 0.9rem;
     padding: 5px;
-  }
-  
-  @media (max-width:638px) {
+}
+
+.btnProject {
+    border: 2px solid #6b3812;
+    border-radius: 30px;
+    width: 40px;
+    padding: 30px;
+}
+
+.swiper-button-next{
+}
+
+@media (max-width:638px) {
     .swiper-container {
-      width: 100%;
+        width: 100%;
     }
-  }
-  
-  @media (max-width:500px) {
+}
+
+@media (max-width:500px) {
     .swiper-container {
-      width: 70vw;
+        width: 70vw;
     }
-  }
-  
-  @media (max-width:300px) {
+}
+
+@media (max-width:300px) {
     .swiper-container {
-      width: 100%;
+        width: 100%;
     }
-  
+
     .swiper-slide {
-      border-radius: 0px;
+        border-radius: 0px;
     }
-  
+
     .swiper-container .ImgHolder {
-      border-radius: 0px;
+        border-radius: 0px;
     }
-    .ContentHolder{
-      border-radius: 0px;
+
+    .ContentHolder {
+        border-radius: 0px;
     }
-  }
+}
 
 /*              blog                */
 #blog {
@@ -454,7 +557,7 @@ body {
     width: 80%;
 }
 
-.titleBlog {
+.titleBersama {
     font-family: 'Fraunces', serif;
     font-size: 30px;
     font-weight: 700;
@@ -463,4 +566,26 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+.bodyBlog {
+    border: 2px solid #6b3812;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.cardBlog {
+    display: flex;
+    width: 100%;
+}
+
+.cardBlog img {
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    object-fit: cover;
 }

@@ -16,43 +16,32 @@ let pokemon = [
     { "name": "Tokomon", "img": "https://digimon.shadowsmith.com/img/tokomon.jpg", "level": "In Training" },
 ]
 
-// let Listpokemon = document.getElementById('swiper-wrapper');
-
-// for (let i = 0; i < pokemon.length; i++) {
-//     const element = pokemon[i];
-//     const card = `
-//     <div class="swiper-slide">
-//         <img src="${element.img}" alt="${element.name}">
-//         <h1>${element.name}</h1>
-//         <p>${element.level}</p>
-//     </div>
-//     `
-//     Listpokemon.innerHTML += card;
-// }
-
 
 let slideHolder = document.querySelector("#slideHolder")
-for (let i of pokemon) slideHolder.innerHTML += `
-    <div class="swiper-slide"> 
+for (let i of pokemon) {
+    slideHolder.innerHTML += `
+      <div class="swiper-slide">
         <div class="ImgHolder">
-            <img src="${i.img}">
+          <img src="${i.img}" alt="${i.name}" />
         </div>
         <div class="ContentHolder">
-            <h3>${i.name}</h3>
-            <p>${i.level}</p>
+          <h3>${i.name}</h3>
+          <p>${i.level}</p>
         </div>
-    </div>`
-
+      </div>
+    `;
+  }
+  
 const swiper = new Swiper('#craouselContainer', {
-    grabCursor: true,
+    // grabCursor: true,
     centeredSlides: true,
-    slidesPerView: 2.3,
+    slidesPerView: 2,
     loop: true,
     spaceBetween: 30,
     effect: "coverflow",
     coverflowEffect: {
         rotate: 0,
-        depth: 800,
+        depth: 20,
         slideShadows: true,
     },
     navigation: {
@@ -74,3 +63,20 @@ const swiper = new Swiper('#craouselContainer', {
 //     if (window.innerWidth < 501) swiper.params.slidesPerView = 1
 //     swiper.update()
 // }
+
+
+/////////////////////// about me /////////////////////////
+const about = new Swiper('#slick-carousel', {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 6000,
+      arrows: false,
+      dots: true,
+      cssEase: 'ease-in-out',
+      speed: 800,
+      fade: true,
+      infinite: true,
+      pauseOnFocus: false,
+      pauseOnHover: false
+    });
