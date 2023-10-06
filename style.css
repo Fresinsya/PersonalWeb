@@ -330,12 +330,20 @@ body {
 
 .Contact {
     display: flex;
-    padding-top: 90px;
-    padding-bottom: 50px;
+    padding: 90px 50px 50px 10px;
     box-sizing: border-box;
 }
 
-.Contact img {
+.iconContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    padding: 20px;
+}
+
+.profileContact {
     max-width: 100%;
     width: 100%;
     height: 100%;
@@ -343,37 +351,34 @@ body {
 
 .chatContact {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50%;
-    height: 80vh;
+    height: 100vh;
     padding: 20px;
     border: 2px solid #6b3812;
 }
 
 .titleContact {
+    display: flex;
+    justify-content: center;
     font-family: 'Fraunces', serif;
     font-size: 40px;
     font-weight: 700;
     color: #6b3812;
-    margin-bottom: 20px;
 }
 
 .formContact {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 20px;
 }
 
-.input2 {
-    width: 100%;
-}
-
-.input2 input {
+.input {
     display: flex;
-    width: 100%;
-    height: 50px;
+    width: 70%;
+    height: 45px;
     border: 2px solid #6b3812;
     border-radius: 25px;
     padding: 0 20px;
@@ -381,23 +386,72 @@ body {
     font-weight: 400px;
     font-family: 'DM Sans', sans-serif;
     color: #6b3812;
+    border: 2px solid#6b3812;
 }
 
-@media screen and (max-width: 768px) {
-    .input {}
+.btn:hover {
+    background-color: #F8F0DE;
+    color: #6b3812;
+
 }
 
 .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
     border-radius: 25px;
+    border: 2px solid #6b3812;
     background-color: #6b3812;
     padding: 0.5em;
     text-decoration: none;
     color: #F8F0DE;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 20px;
     width: 50%;
+    margin: 40px;
+
     font-family: 'Fraunces', serif;
-    transition: 0.3s;
+}
+
+.bubble {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    height: 40px;
+    background: #6b3812;
+    -webkit-border-radius: 53px;
+    -moz-border-radius: 53px;
+    border-radius: 53px;
+}
+
+.bubbleFoto {
+    width: 60px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.bubble h3 {
+    display: flex;
+    align-items: center;
+    color: #F8F0DE;
+    font-size: 1em;
+    padding: 0 20px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 15px 18px 0;
+    border-color: #6b3812 transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    bottom: -15px;
+    left: 25px;
 }
 
 
@@ -441,7 +495,7 @@ body {
 }
 
 .swiper-slide .ImgHolder {
-    background-color: #4361ee;
+    background-color: #6b3812;
     display: flex;
     width: 100%;
     height: auto;
@@ -451,7 +505,7 @@ body {
 }
 
 .ContentHolder::before {
-    background-color: #4361ee;
+    background-color: #6b3812;
     content: '';
     width: 50px;
     height: 50px;
@@ -471,18 +525,18 @@ body {
 .swiper-pagination-bullet {
     background-color: white;
     opacity: 1;
-    border: 1px solid #4361ee;
+    border: 1px solid #6b3812;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #4361ee;
+    background-color: #6b3812;
 }
 
 .swiper-button {
     border: 1px solid white;
 }
 
-#slideHolder :nth-child(odd){
+#slideHolder :nth-child(odd) {
     top: 50px;
 
 }
@@ -493,7 +547,7 @@ body {
     border-radius: 50%;
     margin: auto;
     object-fit: cover;
-    border: 3px solid #4361ee;
+    border: 3px solid #6b3812;
     outline: 2px solid white;
 }
 
@@ -508,14 +562,14 @@ body {
     padding: 5px;
 }
 
-.btnProject {
+#btnProject {
     border: 2px solid #6b3812;
-    border-radius: 30px;
-    width: 40px;
-    padding: 30px;
-}
+    border-radius: 20px;
+    width: 45px;
+    height: 70px;
+    color: #6b3812;
 
-.swiper-button-next{
+
 }
 
 @media (max-width:638px) {
@@ -572,8 +626,6 @@ body {
     border: 2px solid #6b3812;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 20px;
     gap: 20px;
 }
@@ -581,11 +633,12 @@ body {
 .cardBlog {
     display: flex;
     width: 100%;
+    justify-content: space-evenly;
 }
 
 .cardBlog img {
     width: 100%;
-    max-width: 300px;
-    height: 100%;
-    object-fit: cover;
+    max-width: 400px;
+    height: 200px;
+    /* object-fit: cover; */
 }
