@@ -167,7 +167,7 @@ body {
     margin-bottom: 30px;
 }
 
-.isiabout p span {
+.aboutme span {
     font-family: 'Fraunces', serif;
     font-size: 20px;
     font-weight: 700;
@@ -186,59 +186,62 @@ body {
     transition: 0.3s;
 }
 
-/* footer */
-.footer {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    padding: 20px 40px;
-    background-color: #6b3912b7;
-    gap: 40px;
-}
-
-.titleFooter {
-    margin: auto;
-}
-
-.titleFooter h2 {
-    font-family: 'Fraunces', serif;
-    font-size: 30px;
-    font-weight: 700;
-    color: #F8F0DE;
-}
-
-.titleFooter p {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 200;
-    color: #F8F0DE;
-    line-height: 1;
-}
-
-.tubuhFooter {
-    display: block;
-    margin: auto;
-    gap: 10px;
-    color: #F8F0DE;
-}
-
-.tubuhFooter a {
+.skill i {
     display: flex;
     text-decoration: none;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
-    /* border-radius: 21px; */
+    width: 35px;
+    height: 35px;
     background: #F8F0DE;
     border-radius: 34px;
-    /* background: #e0e0e0; */
-    box-shadow: 6px 7px 5px #656565, -3px -3px 5px #F8F0DE;
+    border: 3px;
+}
+
+#TubuhAbout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.tubuhAbout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    width: 100%;
+}
+
+
+.titleTubuh {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #6b3812;
+    padding: 0 30px;
+    width: 100%;
+}
+
+.titleTubuh p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    color: #6b3812;
+    line-height: 1;
+    width: 100%;
 }
 
 .slick-carousel {
-    margin: 1rem auto;
-    max-width: 1200px;
+    display: flex;
+    justify-content: end;
+    width: 100%;
     overflow: hidden;
     position: relative;
     height: 400px;
@@ -323,6 +326,59 @@ body {
     content: "";
     color: white;
 }
+
+
+
+/* footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 20px 40px;
+    background-color: #6b3912b7;
+    gap: 40px;
+}
+
+.titleFooter {
+    margin: auto;
+}
+
+.titleFooter h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #F8F0DE;
+}
+
+.titleFooter p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    color: #F8F0DE;
+    line-height: 1;
+}
+
+.tubuhFooter {
+    display: block;
+    margin: auto;
+    gap: 10px;
+    color: #F8F0DE;
+}
+
+.tubuhFooter a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    /* border-radius: 21px; */
+    background: #F8F0DE;
+    border-radius: 34px;
+    /* background: #e0e0e0; */
+    box-shadow: 6px 7px 5px #656565, -3px -3px 5px #F8F0DE;
+}
+
 
 
 
@@ -470,14 +526,14 @@ body {
     display: grid;
     place-items: center;
     position: relative;
-    height: 65vh;
+    height: 75vh;
     box-sizing: border-box;
     border: 2px solid #6b3812;
 }
 
 .swiper-container {
     border-radius: 5px;
-    width: 60vw;
+    width: 70vw;
     overflow: hidden;
     font-size: 50px;
     position: relative;
@@ -522,6 +578,22 @@ body {
     border-top-right-radius: 20px;
 }
 
+.ContentHolder a{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+
+    margin-inline: auto;
+    text-decoration: none;
+    background-color: #6b3812;
+    border-radius: 20px;
+    padding: 0.7em;
+    color: #F8F0DE;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
 .swiper-pagination-bullet {
     background-color: white;
     opacity: 1;
@@ -529,7 +601,7 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #6b3812;
+    background-color: #6b3812 !important;
 }
 
 .swiper-button {
@@ -547,6 +619,7 @@ body {
     border-radius: 50%;
     margin: auto;
     object-fit: cover;
+    background-color: white;
     border: 3px solid #6b3812;
     outline: 2px solid white;
 }
@@ -608,7 +681,7 @@ body {
     padding-bottom: 50px;
     box-sizing: border-box;
     margin: auto;
-    width: 80%;
+    width: 70%;
 }
 
 .titleBersama {
@@ -634,11 +707,30 @@ body {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
+    gap: 40px;
+    border-bottom: 2px solid #6b3812;
+    padding : 20px 50px;
 }
 
 .cardBlog img {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     height: 200px;
     /* object-fit: cover; */
+}
+
+.containerBlog h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #6b3812;
+    margin-bottom: 20px;
+}
+
+.containerBlog p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    color: #6b3812;
+    line-height: 1;
 }

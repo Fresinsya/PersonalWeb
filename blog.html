@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/eb0075165c.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <section id="navbar" >
+    <section id="navbar">
         <nav class="navbar" style="position: fixed; width: 100%;">
             <a class="navItem" href="index.html">Home</a>
             <a class="navItem" href="project.html">Project</a>
@@ -24,35 +26,57 @@
         <div class="bodyBlog">
             <div class="columnBlog">
                 <div class="cardBlog">
-                    <img src="asset/download.jpeg" alt="">
+                    <img src="asset/blog1.png" alt="">
                     <div class="containerBlog">
-                        <h2>Blog 1</h2>
-                        <p>Belajar HTML</p>
-                        <a href="blog1.html"><button>Read More</button></a>
+                        <h2>Bagaimana cara menambahkan margin dan padding ke elemen dengan CSS?</h2>
+                        <p class="blog-desc">Margin dan padding dapat ditambahkan ke elemen dengan menggunakan properti
+                            CSS. Berikut adalah contoh penggunaannya:
+
+                            Untuk menambahkan margin,</p>
+                        <a href="https://clear-quality-b6f.notion.site/Bagaimana-cara-menambahkan-margin-dan-padding-ke-elemen-dengan-CSS-8d98a16d0b2c40459d40a873e021c579?pvs=4"
+                            target="_blank">Read more </a>
                     </div>
                 </div>
             </div>
             <div class="columnBlog">
                 <div class="cardBlog">
                     <div class="containerBlog">
-                        <h2>Blog 2</h2>
-                        <p>Belajar CSS</p>
-                        <a href="blog2.html"><button>Read More</button></a>
+                        <h2>Bagaimana cara membuat layout responsif dengan CSS?</h2>
+                        <p class="blog-desc">Layout responsif adalah teknik dalam CSS yang memungkinkan tampilan suatu halaman web dapat menyesuaikan diri dengan berbagai ukuran layar, baik itu pada perangkat desktop maupun mobile. Berikut adalah beberapa langkah dalam membuat layout </p>
+                        <a href="https://clear-quality-b6f.notion.site/Bagaimana-cara-membuat-layout-responsif-dengan-CSS-01e96b5639be4f8f8a2ad34056cd84e2?pvs=4"
+                            target="_blank">Read more </a>
                     </div>
-                    <img src="asset/download.jpeg" alt="">
+                    <img src="asset/blog2.png" alt="">
                 </div>
             </div>
             <div class="columnBlog">
                 <div class="cardBlog">
-                    <img src="asset/download.jpeg" alt="">
+                    <img src="asset/blog3.png" alt="">
                     <div class="containerBlog">
-                        <h2>Blog 3</h2>
-                        <p>Belajar Javascript</p>
-                        <a href="blog3.html"><button>Read More</button></a>
+                        <h2>Bagaimana cara perhitungan em, rem, %, vh, vw di CSS?</h2>
+                        <p class="blog-desc">Cara perhitungan unit ukuran dalam CSS seperti em, rem, %, vh, dan vw dapat bervariasi tergantung pada konteks penggunaannya.</p>
+                        <a href="https://clear-quality-b6f.notion.site/Bagaimana-cara-perhitungan-em-rem-vh-vw-di-CSS-d589db71a03e46ec9933c4fe1d99c48c?pvs=4"
+                            target="_blank">Read more </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <script>
+        const blogDesc = document.querySelectorAll(".blog-desc");
+        const maxWords = 10;
+
+
+        blogDesc.forEach((myElement) => {
+            const words = myElement.innerText.split(" ");
+            if (words.length > maxWords) {
+                myElement.textContent = words.slice(0, maxWords).join(" ") + "...";
+            }
+            console.log(words)
+        });
+    </script>
 </body>
+
 </html>
