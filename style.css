@@ -125,7 +125,7 @@ body {
 /* about me */
 #about {
     padding-top: 90px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     box-sizing: border-box;
     margin: 0 20px;
 }
@@ -135,7 +135,7 @@ body {
     width: 100%;
     padding: 0 60px;
     gap: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 
 }
 
@@ -211,7 +211,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    padding: 60px;
     width: 100%;
 }
 
@@ -257,10 +257,12 @@ body {
 }
 
 .slick-carousel img {
-    object-fit: cover;
+    /* object-fit: cover; */
     height: 350px !important;
     display: block;
     margin: 0 auto;
+    width: 100%;
+
 }
 
 /* Progress Bar Styles */
@@ -319,7 +321,7 @@ body {
 }
 
 .slick-dots li button {
-    height: 0.5rem;
+    height: 1.2rem;
 }
 
 .slick-dots li button:before {
@@ -551,7 +553,7 @@ body {
 }
 
 .swiper-slide .ImgHolder {
-    background-color: #6b3812;
+    background-color: #6e3f1a;
     display: flex;
     width: 100%;
     height: auto;

@@ -8,18 +8,19 @@ let pokemon = [
   {
     "name": "Media Nusa Mandiri",
     "img": "./asset/mnm.jpeg"
-    , "Desc": "In Training"
+    , "Desc": "Diberikan tugas untuk memperbaiki website perusahaan dengan menggunakan bootstrap, seperti menambah swiper dan animasi hover.",
+    "link" : "https://medianusamandiri.com/"
   },
   {
     "name": "Sky High",
     "img": "./asset/skyhigh.png",
-    "Desc": "In Training",
+    "Desc": "Membuat sebuah website e-commerce yang menjual sabun khusus untuk kulit sensitif.",
     "link": "https://uts-pem-web.vercel.app/"
   },
   {
     "name": "Food Corner", 
     "img": "./asset/e-canteen.jpg", 
-    "Desc": "In Training",
+    "Desc": "Website untuk mengorder makanan pada sebuah kantin, secara online, sehingga dapat mengurangi antrian, menggunakan bootstrap.",
     "link": "https://blue-bewildered-swallow.cyclic.app/"
   },
 
@@ -68,13 +69,5 @@ const swiper = new Swiper('#craouselContainer', {
   },
   autoplay: { delay: 5000 }
 });
-// window.onresize = queryResizer
-// queryResizer()
-// function queryResizer() {
-//     if (window.innerWidth < 724) swiper.params.slidesPerView = 2
-//     if (window.innerWidth > 501) swiper.params.slidesPerView = 2
-//     if (window.innerWidth > 724) swiper.params.slidesPerView = 2.3
-//     if (window.innerWidth < 501) swiper.params.slidesPerView = 1
-//     swiper.update()
-// }
+
 
